@@ -2,9 +2,7 @@ from flask import Flask
 from flask import request,render_template
 app = Flask(__name__)
 from test import loan_predict
-import os
 
-PORT = int(os.environ.get('PORT', 5000))
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -23,4 +21,4 @@ def loan():
     # return 'Hello, World!'
 
 if __name__ == '__main__':
-    app.run(port=PORT)
+    app.run()
